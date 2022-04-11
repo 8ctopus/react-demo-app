@@ -1,5 +1,6 @@
 import './App.css';
 import ExpenseItem from './components/ExpenseItem.js';
+import NewExpense from './components/NewExpense.js';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <ExpenseItem date={ new Date(2022,3,4) } description="car insurance" amount="200" />
       <ExpenseItem date={ new Date(2022,4,4) } description="telephone" amount="100" />
       <ExpenseItem date={ new Date(2022,1,1) } description="champagne" amount="50" />
+      <NewExpense />
     </div>
   );
 }
