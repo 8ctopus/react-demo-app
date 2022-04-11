@@ -23,6 +23,7 @@ export default function NewExpense(props) {
         console.log("form clicked!");
 
         const expense = {
+            id: new Date(),
             description,
             amount,
             date: new Date(date),
