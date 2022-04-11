@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function NewExpense() {
+export default function NewExpense(props) {
     const [description, setDescription] = useState('test');
     const [amount, setAmount] = useState('10');
     const [date, setDate] = useState('2022-04-10');
@@ -19,13 +19,16 @@ export default function NewExpense() {
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
-        console.log("form clicked!", {
+
+        console.log("form clicked!");
+
+        const expense = {
             description,
             amount,
-            date,
-        });
+            date: new Date(date),
+        };
 
-        setDescription("submited");
+        props.onCreateExpense(expense);
     };
 
     return <div>
