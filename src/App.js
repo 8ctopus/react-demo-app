@@ -28,8 +28,8 @@ export default function App() {
 
     setExpenses((prevExpenses) => {
       return [
-        ...prevExpenses,
         expense,
+        ...prevExpenses,
       ];
     });
   };
