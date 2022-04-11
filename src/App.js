@@ -2,16 +2,27 @@ import './App.css';
 import ExpenseItem from './components/ExpenseItem.js';
 import NewExpense from './components/NewExpense.js';
 
-function App() {
+export default function App() {
+  const expenses = [{
+    date: new Date('2022-3-4'),
+    description: 'car insurance',
+    amount: 200,
+  }, {
+    date: new Date('2022-4-4'),
+    description: 'telephone',
+    amount: 100,
+  }, {
+    date: new Date('2022-1-1'),
+    description: 'champagne',
+    amount: 50,
+  }];
+
   return (
     <div className="App">
-      <h1>Let's get started!</h1>
-      <ExpenseItem date={ new Date(2022,3,4) } description="car insurance" amount="200" />
-      <ExpenseItem date={ new Date(2022,4,4) } description="telephone" amount="100" />
-      <ExpenseItem date={ new Date(2022,1,1) } description="champagne" amount="50" />
+      {
+        expenses.map(expense => <ExpenseItem date={expense.date} description={expense.description} amount={expense.amount} />)
+      }
       <NewExpense />
     </div>
   );
 }
-
-export default App;
