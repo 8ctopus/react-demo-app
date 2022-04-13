@@ -5,5 +5,6 @@ Basic react application based on https://www.udemy.com/course/react-the-complete
 ## demo
 
 ```sh
+npm install
 npm start
 ```
